@@ -13,10 +13,14 @@ public class SpacedLogger implements Logger {
 
     private String spaceMessage (String message){
         String spacedWord = "";
-        for (int i = 0; i < (message.length() - 1); i++){
-            spacedWord += message.charAt(i) + " ";
+            if (!message.isBlank()){
+            if (message.length() >= 2){
+                for (int i = 0; i < (message.length() - 1); i++){
+                    spacedWord += message.charAt(i) + " ";
+                }
+            }
+            spacedWord += message.charAt(message.length()-1);
         }
-        spacedWord += message.charAt(message.length()-1);
         return spacedWord;
     }
     
