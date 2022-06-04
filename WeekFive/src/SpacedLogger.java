@@ -13,7 +13,7 @@ public class SpacedLogger implements Logger {
 
     private String spaceMessage (String message){
         String spacedWord = "";
-            if (!message.isBlank()){
+        if (!message.isBlank()){
             if (message.length() >= 2){
                 for (int i = 0; i < (message.length() - 1); i++){
                     spacedWord += message.charAt(i) + " ";
